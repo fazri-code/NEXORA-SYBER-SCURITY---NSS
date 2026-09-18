@@ -1,0 +1,433 @@
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#020713;
+  color:#eaf8ff;
+  font:15px system-ui,Arial;
+  overflow-x:hidden;
+}
+
+.grid{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 75% 25%,#063d68 0,transparent 28%),
+    radial-gradient(circle at 15% 80%,#21105a 0,transparent 28%),
+    linear-gradient(rgba(0,190,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,190,255,.05) 1px,transparent 1px);
+  background-size:auto,auto,42px 42px,42px 42px;
+}
+
+header{
+  height:72px;
+  position:sticky;
+  top:0;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  gap:25px;
+  padding:0 5%;
+  background:#020713dd;
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid #008cff55;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#00d9ff;
+  text-decoration:none;
+  font-size:32px;
+}
+
+.logo span{
+  font-size:19px;
+  font-weight:800;
+  letter-spacing:3px;
+  color:white;
+}
+
+.logo small{
+  display:block;
+  font-size:8px;
+  color:#00d9ff;
+  letter-spacing:2px;
+}
+
+nav{
+  display:flex;
+  gap:22px;
+  justify-content:center;
+  flex:1;
+}
+
+nav a{
+  color:#9dc1d5;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.join,
+.cta,
+button{
+  color:white;
+  background:#008cff22;
+  border:1px solid #00d8ff;
+  border-radius:8px;
+  padding:10px 15px;
+  text-decoration:none;
+  box-shadow:0 0 22px #00bfff22;
+}
+
+.hero{
+  max-width:1200px;
+  min-height:590px;
+  margin:auto;
+  padding:65px 5%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:25px;
+}
+
+.tag{
+  color:#00d9ff;
+  letter-spacing:2px;
+  font-size:11px;
+}
+
+.hero h1{
+  font-size:clamp(48px,7vw,84px);
+  line-height:.9;
+  margin:15px 0;
+}
+
+.hero h1 span{
+  font-size:.55em;
+  color:#00d9ff;
+  letter-spacing:4px;
+}
+
+.lead{
+  max-width:610px;
+  color:#a9c7d7;
+  font-size:17px;
+  line-height:1.7;
+}
+
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px 18px;
+  color:#72c7e4;
+  font-size:12px;
+  margin:20px 0;
+}
+
+.cta{
+  display:inline-block;
+  background:linear-gradient(90deg,#009fe8,#176eff);
+  font-weight:800;
+}
+
+.visual{
+  height:450px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.ring{
+  width:360px;
+  height:360px;
+  border:1px solid #00bfff88;
+  border-radius:50%;
+  font-size:260px;
+  text-align:center;
+  line-height:360px;
+  color:#00bfff18;
+  box-shadow:
+    0 0 80px #009dff33,
+    inset 0 0 70px #009dff22;
+}
+
+.hood{
+  position:absolute;
+  font-size:50px;
+  text-align:center;
+  color:#00d9ff;
+  text-shadow:0 0 20px #00cfff;
+}
+
+.hood strong{
+  display:block;
+  font-size:95px;
+  color:#020914;
+}
+
+.term{
+  position:absolute;
+  bottom:20px;
+  left:0;
+  background:#010b18dd;
+  border:1px solid #008cff;
+  padding:14px;
+  width:290px;
+  color:#58e8ff;
+  font:12px monospace;
+  line-height:1.8;
+}
+
+.section,
+.dashboard,
+.wide,
+.about{
+  max-width:1200px;
+  margin:auto;
+  padding:55px 5%;
+}
+
+h2{
+  font-size:30px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:12px;
+}
+
+.cards article,
+.panel,
+.wide,
+.about{
+  border:1px solid #008cff44;
+  background:#041426dd;
+  box-shadow:inset 0 0 40px #008cff08;
+}
+
+.cards article{
+  padding:22px 15px;
+  min-height:190px;
+  transition:.2s;
+}
+
+.cards article:hover{
+  transform:translateY(-4px);
+  border-color:#00d9ff;
+}
+
+.cards p,
+.panel p,
+.wide p,
+.about p{
+  color:#8eafc0;
+  line-height:1.6;
+  font-size:13px;
+}
+
+.dashboard{
+  display:grid;
+  grid-template-columns:1.2fr 1fr .9fr;
+  gap:14px;
+}
+
+.panel{
+  padding:23px;
+  min-height:220px;
+}
+
+.list{
+  color:#5fe2ff!important;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin:18px 0;
+}
+
+.stats b{
+  font-size:28px;
+  text-align:center;
+  padding:14px;
+  border:1px solid #008cff44;
+  color:#dffaff;
+}
+
+.stats small{
+  display:block;
+  font-size:10px;
+  color:#659ab2;
+  font-weight:400;
+}
+
+.panel button{
+  cursor:pointer;
+}
+
+.note{
+  font-size:11px!important;
+  color:#5f8396!important;
+}
+
+.wide{
+  margin-top:20px;
+  padding:35px 5%;
+}
+
+.lines{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:20px;
+}
+
+.lines span{
+  border-left:2px solid #00cfff;
+  padding:10px;
+  color:#8dd7ea;
+  background:#008cff09;
+  font:12px monospace;
+}
+
+.about{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  margin-top:20px;
+}
+
+.principles{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  align-content:center;
+}
+
+.principles b{
+  border:1px solid #00cfff55;
+  padding:13px;
+  color:#5ee8ff;
+  font-size:11px;
+}
+
+footer{
+  padding:35px 5%;
+  border-top:1px solid #008cff44;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:#82aabd;
+  background:#01050ddd;
+}
+
+footer b{
+  font-size:19px;
+  color:white;
+}
+
+footer small{
+  display:block;
+  color:#00cfff;
+  font-size:8px;
+}
+
+@media(max-width:900px){
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .dashboard{
+    grid-template-columns:1fr;
+  }
+
+  .about{
+    display:block;
+  }
+
+  .principles{
+    margin-top:20px;
+  }
+
+  .visual{
+    height:330px;
+  }
+
+  footer{
+    display:block;
+    text-align:center;
+  }
+
+  footer>*{
+    display:block;
+    margin:8px;
+  }
+}
+
+@media(max-width:500px){
+
+  .hero{
+    padding-top:40px;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .lead{
+    font-size:14px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .ring{
+    width:270px;
+    height:270px;
+    line-height:270px;
+    font-size:190px;
+  }
+
+  .term{
+    width:240px;
+    font-size:10px;
+  }
+
+  .join{
+    padding:8px;
+  }
+
+  .logo span{
+    font-size:15px;
+  }
+
+  .logo{
+    font-size:27px;
+  }
+
+  .lines{
+    grid-template-columns:1fr;
+  }
+}
